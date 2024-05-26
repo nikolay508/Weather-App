@@ -45,7 +45,7 @@ body {
     margin-right: 16px;
     font-size: 18px;
 }
-.search button{
+.search button {
     border: 0;
     outline: 0;
     background: #ebfffc;
@@ -54,18 +54,18 @@ body {
     height: 60px;
     cursor: pointer;
 }
-.search button img{
+.search button img {
     width: 16px
 }
-.weather-icon{
+.weather-icon {
     width: 170px;
     margin-top: 30px;
 }
-.weather h1{
+.weather h1 {
     font-size: 80px;
     font-weight: 500;
 }
-.weather h2{
+.weather h2 {
     font-size: 45px;
     font-weight: 400;
     margin-top: -10px;
