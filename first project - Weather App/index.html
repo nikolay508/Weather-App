@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="title">
+    <h1>Weather App</h1>
+    <h3>Made by Nikolay Todorov</h3>
+</div>
+
+<div class="card">
+    <div class="search">
+        <input type="text" placeholder="enter city name" 
+        spellcheck="false">
+        <button><img src="https://static-00.iconduck.com/assets.00/search-icon-2048x2048-cmujl7en.png" class="SearchImage"></button>
+    </div>
+    <div class="error">
+        <p>Invalid city name! Try again</p>
+    </div>
+    <div class="weather">
+        <img src="https://cdn-icons-png.freepik.com/512/4150/4150904.png" class="weather-icon">
+        <h1 class="temp">22c</h1>
+        <h2 class="city">New York</h2>
+        <div class="details">
+            <div class="col">
+                <img src="https://static-00.iconduck.com/assets.00/humidity-icon-2048x1675-xxsge5os.png">
+                <div>
+                    <p class="humidity">50%</p>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="col">
+                <img src="https://www.pngall.com/wp-content/uploads/5/Wind-PNG-Pic.png">
+                <div>
+                    <p class="wind">15 km/h</p>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+const apiKey = "990859935d868b088c1aeb62b313b126";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
+const searchBox = document.querySelector('.search input');
+const searchBtn = document.querySelector('.search button');
+const weatherIcon = document.querySelector('.weather-icon');
+
+async function checkWeather(city){
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+
+    if(response.status === 404){
+        document.querySelector('.error').style.display = 'block';
+        document.querySelector('.weather').style.display = 'none';
+    }else{
+        let data = await response.json();
+
+        document.querySelector('.city').innerHTML = data.name;
+        document.querySelector('.temp').innerHTML = Math.round(data.main.temp) + 'c';
+        document.querySelector('.humidity').innerHTML = data.main.humidity + '%';
+        document.querySelector('.wind').innerHTML = data.wind.speed + ' km/h';
+
+        if(data.weather[0].main === 'Clouds'){
+            weatherIcon.src = 'https://i.pinimg.com/originals/d5/cf/12/d5cf12d6f7b25ae1d78dd18d2a46c690.png';
+        }else if(data.weather[0].main === 'Clear'){
+            weatherIcon.src = 'https://static.vecteezy.com/system/resources/thumbnails/020/032/515/small_2x/sun-logo-template-of-sunrise-sunset-sunbursts-cute-sunshine-for-kids-cartoon-graphic-shape-sun-silhouette-sticker-png.png';
+        }else if(data.weather[0].main === 'Rain'){
+            weatherIcon.src = 'https://cdn-icons-png.freepik.com/512/4150/4150904.png';
+        }else if(data.weather[0].main === 'Drizzle'){
+            weatherIcon.src = 'https://cdn-icons-png.flaticon.com/512/106/106044.png';
+        }else if(data.weather[0].main === 'Mist'){
+            weatherIcon.src = 'https://cdn-icons-png.flaticon.com/512/6642/6642957.png';
+        }
+
+        document.querySelector('.weather').style.display = 'block';
+        document.querySelector('.error').style.display = 'none';
+    }
+
+}
+
+searchBtn.addEventListener('click', ()=>{
+    checkWeather(searchBox.value);
+})
+
+</script>
+
+</body>
+</html>
