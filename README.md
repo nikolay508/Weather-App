@@ -1,4 +1,4 @@
-# 🌦️ Global Weather App
+# Global Weather App
 
 Global Weather App is a sleek and interactive web application that provides real-time weather updates for any city worldwide. With its user-friendly design, you can effortlessly check:
 
