@@ -1,4 +1,23 @@
-# Weather Application
-This project represents the weather conditions of any city around the world.<br>
-It is made with JavaScript, HTML, CSS and it is used API for the weather information.<br>
-Just write an existing city in the search bar and it will show you the temperature in Celsius, the humidity in percentage and the wind speed in km/h.
+# 🌦️ Global Weather App
+
+Global Weather App is a sleek and interactive web application that provides real-time weather updates for any city worldwide. With its user-friendly design, you can effortlessly check:
+
+### 🌡️ Temperature in Celsius
+### 💧 Humidity in percentage
+### 🌬️ Wind speed in km/h
+### ✨ Features
+
+Easy-to-use search bar: Enter the name of any existing city to get instant weather information.
+Modern UI: Built with HTML, CSS, and JavaScript for a clean and responsive design.
+Real-time data: Powered by a reliable weather API for accurate and up-to-date information.
+
+## 🚀 Technologies Used
+HTML5
+CSS3
+JavaScript
+Weather API integration
+
+## 🌍 How It Works
+Type the name of a city in the search bar.
+View the weather details for your selected city.
+Get comprehensive information about the temperature, humidity, and wind speed.
