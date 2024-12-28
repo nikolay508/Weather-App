@@ -20,4 +20,7 @@ Weather API integration
 ## 🌍 How It Works
 Type the name of a city in the search bar.
 View the weather details for your selected city.
-Get comprehensive information about the temperature, humidity, and wind speed.
+Get comprehensive information about the temperature, humidity, and wind speed. <hr>
+
+### Here you can briefly see how it works: <br>
+<img width="1465" alt="Screenshot 2024-12-29 at 0 26 00" src="https://github.com/user-attachments/assets/22717df0-205c-40b6-9ca9-371187688f06" />
