@@ -7,14 +7,14 @@ Global Weather App is a sleek and interactive web application that provides real
 #### 🌬️ Wind speed in km/h
 #### ✨ Features
 
-Easy-to-use search bar: Enter the name of any existing city to get instant weather information.
-Modern UI: Built with HTML, CSS, and JavaScript for a clean and responsive design.
+Easy-to-use search bar: Enter the name of any existing city to get instant weather information. <br>
+Modern UI: Built with HTML, CSS, and JavaScript for a clean and responsive design. <br>
 Real-time data: Powered by a reliable weather API for accurate and up-to-date information.
 
 ## 🚀 Technologies Used
-HTML5
-CSS3
-JavaScript
+HTML5 <br>
+CSS3 <br>
+JavaScript <br>
 Weather API integration
 
 ## 🌍 How It Works
